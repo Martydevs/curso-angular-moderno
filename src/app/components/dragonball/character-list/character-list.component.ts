@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, type InputSignal } from '@angular/core';
 import type { Character } from "../../../interfaces/character.interface";
 
 @Component({
@@ -8,7 +8,8 @@ import type { Character } from "../../../interfaces/character.interface";
   templateUrl: './character-list.component.html',
 })
 export class CharacterListComponent {
-  characters = input.required<Character[]>();
+  characters: InputSignal<Character[]> = input.required();
+  listTitle: InputSignal<string> = input.required();
 
   powers({ power }: Character) {
     const styles = computed(() => {

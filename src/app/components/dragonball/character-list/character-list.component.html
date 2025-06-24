@@ -1,3 +1,7 @@
+<h3>
+  {{ listTitle() }}
+</h3>
+
 <ul>
   @for (character of characters(); track character.id; let i = $index) {
     @if (character.power > 500) {
