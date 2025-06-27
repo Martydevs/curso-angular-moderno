@@ -1,0 +1,10 @@
+<section class="flex flex-row gap-2 mt-2">
+  <input type="text" name="capital" id="capital" class="input" [placeholder]="placeholder()" autofocus
+    (keyup.enter)="searchTerm.emit(capital.value)" #capital>
+
+  <button class="btn min-w-40 btn-primary" (click)="searchTerm.emit(capital.value)">
+    <lucide-icon [name]="search" class="icon"></lucide-icon>
+    Buscar
+  </button>
+
+</section>

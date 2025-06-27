@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: sunset;
+};
+
+@layer components {
+  .icon {
+    @apply size-6;
+  }
+
+  .menu-item-active {
+    @apply bg-primary text-accent-content rounded-md;
+  }
+}
